@@ -31,11 +31,5 @@ DEVICE_PATH := device/oneplus/cheeseburger
 TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := cheeseburger,OnePlus5,oneplus5
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
-
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS += org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
-
 # inherit from the proprietary version
 -include vendor/oneplus/cheeseburger/BoardConfigVendor.mk
